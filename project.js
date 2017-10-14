@@ -108,7 +108,7 @@ $(document).ready(function() {
                 <tr>    
                     <td>${response.results[0].state_abbr}</td>
                     <td>${response.results[0].population}</td>
-                    <td class='number'>${response.results[0].violent_crime}</td>
+                    <td>${response.results[0].violent_crime}</td>
                     <td>${response.results[0].homicide}</td>
                     <td>${response.results[0].rape_legacy}</td>
                     <td>${response.results[0].robbery}</td>
@@ -116,8 +116,7 @@ $(document).ready(function() {
                 </tr>
                 `);
 
-                var newLi = $("<li class='table-like__item'>" + response.results[0].state_abbr + "</li>")
-                newLi.css('style', 'position: absolute; left: 0px; top: 0px;')
+                var newLi = $("<li class='table-like__item'><div class='name'>" + response.results[0].state_abbr + "</div><div class='crime'>" + response.results[0].violent_crime + "</div></li>");
                 $('.table-like').append(newLi)
             })
         })
