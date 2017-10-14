@@ -36,13 +36,125 @@
 		<div id="geochart" style="width: 700px; height: 433px;"></div>
 	</div>
 
-	<div class='text-center' id='crimes'></div>
+<!-- 	<div class='text-center' id='crimes'></div>
+ -->
+    <div class="row" id='crimeTable'>
+        <div class="panel panel-primary">
+            <div class="panel-heading">
+                <h1 class="panel-title">Crime Data 2016</h1>
+            </div>
+            <div class="panel-body">
+                <table class="table table-hover">
+                    <thead>
+                        <tr>
+                            <th>State</th>
+                            <th>Population</th>
+                            <th>Violent Crimes</th>
+                            <th>Homicide</th>
+                            <th>Rape</th>
+                            <th>Robbery</th>
+                            <th>Assault</th>
+                        </tr>
+                    </thead>
+                    <tbody id="crimes">
+                    </tbody>
+                </table>
+            </div>
+        </div>
+    </div>
+
+    <div>
+ 		<button class='btn btn-primary center-block' id='isotope'>Sort by Number of Violent Crimes</button>
+	</div>
+
+	<br>
+
+
+
+
+	<!-- isotope -->
+	<div class='center-block'>
+	<h1>Isotope - vertical table-like</h1>
+
+<div id="sorts" class="button-group">
+  <button class="button is-checked" data-sort-value="original-order">original order</button>
+  <button class="button" data-sort-value="name">name</button>
+  <button class="button" data-sort-value="symbol">symbol</button>
+  <button class="button" data-sort-value="number">number</button>
+  <button class="button" data-sort-value="weight">weight</button>
+  <button class="button" data-sort-value="category">category</button>
+</div>
+
+
+<ul class="table-like">
+    
+  <li class="table-like__item">
+    <div class="name">Mercury</div>
+    <div class="symbol">Hg</div>
+    <div class="number">80</div>
+    <div class="weight">200.59</div>
+    <div class="category">transition</div>
+  </li>
+
+  <li class="table-like__item">
+    <div class="name">Tellurium</div>
+    <div class="symbol">Te</div>
+    <div class="number">52</div>
+    <div class="weight">127.6</div>
+    <div class="category">metalloid</div>
+  </li>
+
+  <li class="table-like__item">
+    <div class="name">Bismuth</div>
+    <div class="symbol">Bi</div>
+    <div class="number">83</div>
+    <div class="weight">208.980</div>
+    <div class="category">post-transition</div>
+  </li>
+
+  <li class="table-like__item">
+    <div class="name">Lead</div>
+    <div class="symbol">Pb</div>
+    <div class="number">82</div>
+    <div class="weight">207.2</div>
+    <div class="category">post-transition</div>
+  </li>
+
+  <li class="table-like__item">
+    <div class="name">Gold</div>
+    <div class="symbol">Au</div>
+    <div class="number">79</div>
+    <div class="weight">196.967</div>
+    <div class="category">transition</div>
+  </li>
+
+  <li class="table-like__item">
+    <div class="name">Potassium</div>
+    <div class="symbol">K</div>
+    <div class="number">19</div>
+    <div class="weight">39.0983</div>
+    <div class="category">alkali</div>
+  </li>
+
+  <li class="table-like__item">
+    <div class="name">Sodium</div>
+    <div class="symbol">Na</div>
+    <div class="number">11</div>
+    <div class="weight">22.99</div>
+    <div class="category">alkali</div>
+  </li>
+</ul>
+</div>
+
+	<div class="grid" data-isotope='{ "itemSelector": ".grid-item", "layoutMode": "fitRows" }'></div>
 
 	<script type="text/javascript" src="https://www.gstatic.com/charts/loader.js"></script>
 
 	<script src="https://www.gstatic.com/firebasejs/4.5.0/firebase.js"></script>
 
 	<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+
+	<script src="https://unpkg.com/isotope-layout@3/dist/isotope.pkgd.js"></script>
 
 	<script src="project.js"></script>	
 </body>
