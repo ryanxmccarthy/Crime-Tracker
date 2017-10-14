@@ -22,7 +22,17 @@ $( document ).ready(function() {
 	    });
 
 	    database.ref().on("value", function(snapshot) {
-	      var val = snapshot.val()      
+	      var val = snapshot.val()
+
+	      var table = $('#crimes');
+			table.append(
+				'<tr><td>' + snapshot.val() + '</td>' +
+				'<td>' + roleName + '</td>' +
+				'<td>' + childDate + '</td>' +
+				'<td>' + monthsWorked + '</td>' +
+				'<td>' + childRate + '</td>' +
+				'<td>' + totalBilled + '</td></tr>'
+			);      
 	    }, function(err) {
 	      alert('There was an error!')
 	    })
@@ -35,22 +45,15 @@ $( document ).ready(function() {
 	        method: "GET"
 	    })
 	    .done(function(response) {
-	  		$('#crimes').text(JSON.stringify(response))
+	  		var obj = response
+		  	$('#crimes').text(obj.results[0])
+		  	console.log(obj.results[0])
 	    })
 	})	
 
-
-
-
-
-
-
-
-
+	//maps functionality
 	google.charts.load('current', {
         'packages':['geochart'],
-        // Note: you will need to get a mapsApiKey for your project.
-        // See: https://developers.google.com/chart/interactive/docs/basic_load_libs#load-settings
         'mapsApiKey': 'AIzaSyD-9tSrke72PouQMnMX-a7eZSW0jkFMBWY'
     });
 
@@ -80,7 +83,7 @@ $( document ).ready(function() {
             options['region'] = eventData.region;
         	options['resolution'] = 'provinces';
 	    	var state = currentRegion;
-	    	// console.log(state);
+	    	//removes first three characters
 			var x = state.split('');
 			var y = x.splice(3, 2);
 			var z = y.join('');
@@ -96,14 +99,16 @@ $( document ).ready(function() {
 		    })
 
 		    var key = 'O8BbfShMy4XlOSUGouj8GWAL2aYQpUavro0QLe12';
-		   	var queryURL = 'https://api.usa.gov/crime/fbi/ucr/estimates/states/' + z + '?page=3&per_page=10&output=json&api_key=iiHnOKfno2Mgkt5AynpvPpUQTEyxE77jo1RU8PIv';
+		   	var queryURL = 'https://api.usa.gov/crime/fbi/ucr/estimates/states/' + z + '?page=4&per_page=7&output=json&api_key=iiHnOKfno2Mgkt5AynpvPpUQTEyxE77jo1RU8PIv';
 
 		    $.ajax({
 		        url: queryURL,
 		        method: "GET"
 		    })
 		    .done(function(response) {
-		  		$('#crimes').text(JSON.stringify(response))
+		    	var obj = response
+		  		$('#crimes').text(obj.results[0])
+		  		console.log(obj.results[0])
 		    })
 		})
     };
