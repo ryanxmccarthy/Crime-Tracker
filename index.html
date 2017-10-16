@@ -31,69 +31,70 @@
 		</nav>
 	</div>
 
-	<!-- center this -->
-	<div id='map-display'> 
-		<div id="geochart" style="width: 700px; height: 433px;"></div>
+	<div id='page-content'>
+		<div id='map-display'> 
+			<div id="geochart" style="width: 400px;"></div>
+		</div>
+
+		<div class="container">
+		  <div class="modal fade" id="firstModal" role="dialog">
+		    <div class="modal-dialog"> 
+		      <!-- Modal content-->
+		      <div class="modal-content">
+		        <div class="modal-header">
+		          <button type="button" class="close" data-dismiss="modal">&times;</button>
+		          <h4 class="modal-title"></h4>
+		        </div>
+		        <div class="modal-body">
+		          <p>Use a two letter abbreviation.</p>
+		        </div>
+		        <div class="modal-footer">
+		          <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+		        </div>
+		      </div>
+		    </div>
+		  </div>
+		</div>
+
+		<h3>Input or click on a state to add crime data to the table.</h3>
+
+		<div class="container">
+		  <div class="modal fade" id="secondModal" role="dialog">
+		    <div class="modal-dialog"> 
+		      <!-- Modal content-->
+		      <div class="modal-content">
+		        <div class="modal-header">
+		          <button type="button" class="close" data-dismiss="modal">&times;</button>
+		          <h4 class="modal-title"></h4>
+		        </div>
+		        <div class="modal-body">
+		          <p>You have already added this state.</p>
+		        </div>
+		        <div class="modal-footer">
+		          <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+		        </div>
+		      </div>
+		    </div>
+		  </div>
+		</div>
+
+		<!-- isotope -->
+		<div class='center-block'>
+		<h1>Sortable Crime Table</h1>
+
+		<div id="sorts" class="button-group">
+			<button class="button is-checked" data-sort-value="original-order">Original Order</button>
+			<button class="button" data-sort-value="name">State</button>
+			<button class="button" data-sort-value="name">Population</button>
+			<button class="button" data-sort-value="number">Violent Crimes</button>
+			<button class="button" data-sort-value="number">Homicide</button>
+			<button class="button" data-sort-value="number">Rape</button>
+			<button class="button" data-sort-value="number">Robbery</button>
+			<button class="button" data-sort-value="number">Assault</button>
+		</div>
+
+		<ul class="table-like">
 	</div>
-
-<!-- 	<div class='text-center' id='crimes'></div>
- -->
-<!--     <div class="row" id='crimeTable'>
-        <div class="panel panel-primary">
-            <div class="panel-heading">
-                <h1 class="panel-title">Crime Data 2016</h1>
-            </div>
-            <div class="panel-body">
-                <table class="table table-hover">
-                    <thead>
-                        <tr>
-                            <th>State</th>
-                            <th>Population</th>
-                            <th>Violent Crimes</th>
-                            <th>Homicide</th>
-                            <th>Rape</th>
-                            <th>Robbery</th>
-                            <th>Assault</th>
-                        </tr>
-                    </thead>
-                    <tbody id="crimes">
-                    </tbody>
-                </table>
-            </div>
-        </div>
-    </div>
-
-    <div>
- 		<button class='btn btn-primary center-block' id='isotope'>Sort by Number of Violent Crimes</button>
-	</div> -->
-
-	<!-- <br> -->
-
-
-
-
-	<!-- isotope -->
-	<div class='center-block'>
-	<h1>Sortable Table</h1>
-
-<div id="sorts" class="button-group">
-  <button class="button is-checked" data-sort-value="original-order">original order</button>
-  <button class="button" data-sort-value="name">name</button>
-  <button class="button" data-sort-value="symbol">crimes</button>
-</div>
-
-<ul class="table-like"> 
-  <li class="table-like__item">
-    <div class="name">Texas</div>
-    <div class="symbol">200</div>
-  </li>
-
-  <li class="table-like__item">
-    <div class="name">North Carolina</div>
-    <div class="symbol">746</div>
-  </li>
-</ul>
-</div>
 
 	<div class="grid" data-isotope='{ "itemSelector": ".grid-item", "layoutMode": "fitRows" }'></div>
 
@@ -102,6 +103,10 @@
 	<script src="https://www.gstatic.com/firebasejs/4.5.0/firebase.js"></script>
 
 	<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+
+	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
 
 	<script src="https://unpkg.com/isotope-layout@3/dist/isotope.pkgd.js"></script>
 
