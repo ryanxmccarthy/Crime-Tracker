@@ -31,7 +31,7 @@
 		</nav>
 	</div>
 
-	<div id='page-content'>
+	<div id='map-content'>
 		<div id='map-display'> 
 			<div id="geochart" style="width: 400px;"></div>
 		</div>
@@ -55,9 +55,9 @@
 		    </div>
 		  </div>
 		</div>
+	</div>
 
-		<h3>Input or click on a state to add crime data to the table.</h3>
-
+	<div>
 		<div class="container">
 		  <div class="modal fade" id="secondModal" role="dialog">
 		    <div class="modal-dialog"> 
@@ -77,23 +77,27 @@
 		    </div>
 		  </div>
 		</div>
-
+	</div>
 		<!-- isotope -->
-		<div class='center-block'>
-		<h1>Sortable Crime Table</h1>
+	<div id='crimeTable'>
+		<div>
+			<h3>Input or click on a state to add crime data to the table.</h3>
 
-		<div id="sorts" class="button-group">
-			<button class="button is-checked" data-sort-value="original-order">Original Order</button>
-			<button class="button" data-sort-value="name">State</button>
-			<button class="button" data-sort-value="name">Population</button>
-			<button class="button" data-sort-value="number">Violent Crimes</button>
-			<button class="button" data-sort-value="number">Homicide</button>
-			<button class="button" data-sort-value="number">Rape</button>
-			<button class="button" data-sort-value="number">Robbery</button>
-			<button class="button" data-sort-value="number">Assault</button>
+			<h1>Sortable Crime Table</h1>
+
+			<div id="sorts" class="button-group">
+				<button class="button is-checked" data-sort-value="original-order">Original Order</button>
+				<button class="button" data-sort-value="name">State</button>
+				<button class="button" data-sort-value="number">Population</button>
+				<button class="button" data-sort-value="number">Violent Crimes</button>
+				<button class="button" data-sort-value="number">Homicide</button>
+				<button class="button" data-sort-value="number">Rape</button>
+				<button class="button" data-sort-value="number">Robbery</button>
+				<button class="button" data-sort-value="number">Assault</button>
+			</div>
+
+			<ul class="table-like"></ul>
 		</div>
-
-		<ul class="table-like">
 	</div>
 
 	<div class="grid" data-isotope='{ "itemSelector": ".grid-item", "layoutMode": "fitRows" }'></div>
