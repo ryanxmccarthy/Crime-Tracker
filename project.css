@@ -1,44 +1,3 @@
-.grid-item {
-	width: 25%; 
-	border: 1px solid black;
-	background: grey;
-	margin-bottom: 20px;
-	text-align: center;
-}
-
-.grid-item--width2 { width: 50%; }
-
-.navbar-brand {
-	font-size: 27px;
-	font-weight: bold;
-}
-
-#crimeTable {
-	margin: 0 20px;
-  padding-bottom: 30px;
-}
-
-#table-header {
-  background: #DDD;
-  list-style: none;
-  margin-bottom: 2px;
-  padding: 0;
-  border: 1px solid black;
-}
-
-#map-content {
-  margin-left: auto ;
-  margin-right: auto ;
-}
-
-#geochart {
-  margin: auto;
-  width: 600px;
-}
-.removeGutter {
-  margin-left: -4px;
-}
-
 /*isotope*/
 
 * { box-sizing: border-box; }
@@ -97,9 +56,7 @@ body { font-family: sans-serif; }
 .button-group .button:first-child { border-radius: 0.5em 0 0 0.5em; }
 .button-group .button:last-child { border-radius: 0 0.5em 0.5em 0; }
 
-
 /* ---- table-like ---- */
-
 .table-like {
   background: #DDD;
   list-style: none;
@@ -116,13 +73,11 @@ body { font-family: sans-serif; }
 }
 
 /* ---- vertical table-like ---- */
-
 .table-like__item {
   width: 100%;
   clear: both;
   border: 1px solid;
 }
-
 
 .table-like__item > * {
   display: inline-block;
@@ -136,3 +91,38 @@ body { font-family: sans-serif; }
 .table-like__item .number4 { width: 14%; }
 .table-like__item .number5 { width: 14%; }
 .table-like__item .number6 { width: 14%; }
+
+.navbar-brand {
+	font-size: 27px;
+	font-weight: bold;
+}
+
+.removeGutter {
+  margin-left: -4px;
+}
+
+#clear {
+  border-radius: 8px;
+}
+
+#crimeTable {
+	margin: 0 20px;
+  padding-bottom: 30px;
+}
+
+#geochart {
+  margin: auto;
+  width: 900px;
+}
+
+#sorts {
+  margin-left: 120px;
+}
+
+#table-header {
+  background: #DDD;
+  list-style: none;
+  margin-bottom: 2px;
+  padding: 0;
+  border: 1px solid black;
+}
