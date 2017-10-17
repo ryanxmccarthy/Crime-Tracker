@@ -15,9 +15,20 @@
 
 #crimeTable {
 	margin: 0 20px;
+  padding-bottom: 30px;
 }
 
+#table-header {
+  background: #DDD;
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  border: 1px solid black;
+}
 
+.removeGutter {
+  margin-left: -4px;
+}
 
 /*isotope*/
 
@@ -85,6 +96,7 @@ body { font-family: sans-serif; }
   list-style: none;
   margin: 0;
   padding: 0;
+  border: 1px solid black;
 }
 
 /* clear fix */
@@ -99,17 +111,19 @@ body { font-family: sans-serif; }
 .table-like__item {
   width: 100%;
   clear: both;
-  border-top: 1px solid;
+  border: 1px solid;
 }
 
 
 .table-like__item > * {
   display: inline-block;
-  padding: 4px 4px;
+  /*padding: 4px 4px;*/
 }
 
-.table-like__item .name { width: 30%; }
-.table-like__item .symbol { width: 10%; }
-.table-like__item .weight { width: 15%; }
-.table-like__item .number { width: 10%; }
-.table-like__item .category { width: 20%; }
+.table-like__item .name { width: 14%; }
+.table-like__item .number1 { width: 14%; }
+.table-like__item .number2 { width: 14%; }
+.table-like__item .number3 { width: 14%; }
+.table-like__item .number4 { width: 14%; }
+.table-like__item .number5 { width: 14%; }
+.table-like__item .number6 { width: 14%; }

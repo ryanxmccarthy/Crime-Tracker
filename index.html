@@ -88,15 +88,27 @@
 			<div id="sorts" class="button-group">
 				<button class="button is-checked" data-sort-value="original-order">Original Order</button>
 				<button class="button" data-sort-value="name">State</button>
-				<button class="button" data-sort-value="number">Population</button>
-				<button class="button" data-sort-value="number">Violent Crimes</button>
-				<button class="button" data-sort-value="number">Homicide</button>
-				<button class="button" data-sort-value="number">Rape</button>
-				<button class="button" data-sort-value="number">Robbery</button>
-				<button class="button" data-sort-value="number">Assault</button>
+				<button class="button" data-sort-value="number1">Population</button>
+				<button class="button" data-sort-value="number2">Violent Crimes</button>
+				<button class="button" data-sort-value="number3">Homicide</button>
+				<button class="button" data-sort-value="number4">Rape</button>
+				<button class="button" data-sort-value="number5">Robbery</button>
+				<button class="button" data-sort-value="number6">Assault</button>
 			</div>
 
-			<ul class="table-like"></ul>
+			<ul id='table-header'>
+				<li class='table-like__item'>
+					<div class='name'>Name</div>
+					<div class='number1 removeGutter'>Population</div>
+					<div class='number2 removeGutter'>Violent Crime</div>
+					<div class='number3 removeGutter'>Homicide</div>
+					<div class='number4 removeGutter'>Rape</div>
+					<div class='number5 removeGutter'>Robbery</div>
+					<div class='number6 removeGutter'>Assault</div>
+				</li>
+			</ul>
+			<ul class="table-like">
+			</ul>
 		</div>
 	</div>
 

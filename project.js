@@ -55,13 +55,13 @@ $(document).ready(function() {
                 })
                 .done(function(response) {
                     var newLi = $("<li class='table-like__item'><div class='name'>" + 
-                    response.results[0].state_abbr + "</div><div class='number'>" + 
-                    response.results[0].population + "</div>" + "<div class='number'>" + 
-                    response.results[0].violent_crime + "</div><div class='number'>" + 
-                    response.results[0].homicide + "</div>" + "<div class='number'>" + 
-                    response.results[0].rape_legacy + "</div><div class='number'>" + 
-                    response.results[0].robbery + "</div>" +
-                    // <div class='number'>" + response.results[0].aggravated_assault + "</div>
+                    response.results[0].state_abbr + "</div><div class='number1'>" + 
+                    response.results[0].population + "</div>" + "<div class='number2'>" + 
+                    response.results[0].violent_crime + "</div><div class='number3'>" + 
+                    response.results[0].homicide + "</div>" + "<div class='number4'>" + 
+                    response.results[0].rape_legacy + "</div><div class='number5'>" + 
+                    response.results[0].robbery + "</div><div class='number6'>" + 
+                    response.results[0].aggravated_assault + "</div>" +
                     "</li>"
                     );
                     $('.table-like').append(newLi).isotope( 'appended', newLi );
@@ -120,13 +120,13 @@ $(document).ready(function() {
                 })
                 .done(function(response) {
                     var newLi = $("<li class='table-like__item'><div class='name'>" + 
-                    response.results[0].state_abbr + "</div><div class='number'>" + 
-                    response.results[0].population + "</div>" + "<div class='number'>" + 
-                    response.results[0].violent_crime + "</div><div class='number'>" + 
-                    response.results[0].homicide + "</div>" + "<div class='number'>" + 
-                    response.results[0].rape_legacy + "</div><div class='number'>" + 
-                    response.results[0].robbery + "</div>" +
-                    // <div class='number'>" + response.results[0].aggravated_assault + "</div>
+                    response.results[0].state_abbr + "</div><div class='number1'>" + 
+                    response.results[0].population + "</div>" + "<div class='number2'>" + 
+                    response.results[0].violent_crime + "</div><div class='number3'>" + 
+                    response.results[0].homicide + "</div>" + "<div class='number4'>" + 
+                    response.results[0].rape_legacy + "</div><div class='number5'>" + 
+                    response.results[0].robbery + "</div><div class='number6'>" + 
+                    response.results[0].aggravated_assault + "</div>" +
                     "</li>"
                     );
                     $('.table-like').append(newLi).isotope( 'appended', newLi );
@@ -144,7 +144,12 @@ $(document).ready(function() {
       getSortData: {
         name: '.name',
         symbol: '.symbol',
-        number: '.number parseInt',
+        number1: '.number1 parseInt',
+        number2: '.number2 parseInt',
+        number3: '.number3 parseInt',
+        number4: '.number4 parseInt',
+        number5: '.number5 parseInt',
+        number6: '.number6 parseInt',
         category: '.category',
         weight: function( itemElem ) {
           var weight = $( itemElem ).find('.weight').text();
