@@ -21,11 +21,20 @@
 #table-header {
   background: #DDD;
   list-style: none;
-  margin: 0;
+  margin-bottom: 2px;
   padding: 0;
   border: 1px solid black;
 }
 
+#map-content {
+  margin-left: auto ;
+  margin-right: auto ;
+}
+
+#geochart {
+  margin: auto;
+  width: 600px;
+}
 .removeGutter {
   margin-left: -4px;
 }

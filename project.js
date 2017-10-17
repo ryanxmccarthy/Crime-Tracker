@@ -81,20 +81,74 @@ $(document).ready(function() {
 
     function drawRegionsMap() {
         var data = google.visualization.arrayToDataTable([
-            ['State', 'Foo Factor'],
+            ['State', 'Violent Crimes per Capita','Population'],
+          ['Alabama', 532.27, 4863300], 
+          ['Alaska', 804.16, 741894],
+          ['Arizona', 470.10, 6931071],
+          ['Arkansas', 550.86, 2988248,],
+          ['California', 445.34, 39250017],
+          ['Colorado', 342.62, 5540545],
+          ['Connecticut', 227.12, 3576452],
+          ['Delaware', 508.79, 952065],
+          ['Florida', 430.32, 20612439],
+          ['Georgia', 397.56, 10310371],
+          ['Hawaii', 309.19, 1428557],
+          ['Idaho', 230.28, 1683140],
+          ['Illinois', 436.30, 12801539],
+          ['Indiana', 404.72, 6633053],
+          ['Iowa', 290.62, 3134693],
+          ['Kansas', 380.42, 2907289],
+          ['Kentucky', 232.32, 4436974],
+          ['Louisiana', 566.08, 4681666],
+          ['Maine', 376.95, 1331479],
+          ['Maryland', 472.04, 6016447],
+          ['Massachusetts', 376.95, 6811779],
+          ['Michigan', 459.01, 9928300],
+          ['Minnesota', 242.65, 5519952],
+          ['Mississippi', 459.01, 2988726],
+          ['Missouri', 519.35, 6093000],
+          ['Montana', 368.34, 1042520],
+          ['Nebraska', 291.02, 1907116],
+          ['Nevada', 678.09, 2940058],
+          ['New Hampshire', 197.56, 1334795],
+          ['New Jersey', 245.00, 8944468],
+          ['New Mexico', 702.49, 2081015],
+          ['New York', 376.22, 19745289],
+          ['North Carolina', 372.23, 10146788],
+          ['North Dakota', 251.07, 757952],
+          ['Ohio', 300.29, 11614373],
+          ['Oklahoma', 300.29, 3923561],
+          ['Oregon', 264.57, 4093465],
+          ['Pennsylvania', 316.38, 12784227],
+          ['Rhode Island', 238.92, 1056426],
+          ['South Carolina', 501.82, 4961119],
+          ['South Dakota', 418.39, 865454],
+          ['Tennessee', 632.92, 6651194],
+          ['Texas', 434.42, 27862596],
+          ['Utah', 242.76, 3051217],
+          ['Vermont', 158.34, 624594],
+          ['Virginia', 217.58, 8411808],
+          ['Washington', 302.18, 7288000],
+          ['West Virginia', 358.09, 1831102],
+          ['Wisconsin', 305.93, 5778708],
+          ['Wyoming', 244.24, 585501],
         ]);
 
         var options = {
-            region: '002', // North America
-            colorAxis: { colors: ['#00853f', 'black', '#e31b23'] },
-            backgroundColor: '#81d4fa',
+            // region: '002', // North America
+            colorAxis: { colors: ['#ffffe0', '#ffd59b', '#ffa474', '#f47461', '#db4551', '#b81b34', '#8b0000'] },
+            backgroundColor: 'white',
             datalessRegionColor: '#f8bbd0',
             defaultColor: '#f5f5f5',
+            // width: 1300, 
+            height: 300, 
+            region: "US", 
+            resolution: "provinces",
+            legend: {text: 'hello'}
         };
-
         var geochart = new google.visualization.GeoChart(
             document.getElementById('geochart'));
-        geochart.draw(data, { width: 556, height: 347, region: "US", resolution: "provinces" });
+        geochart.draw(data, options);
 
         google.visualization.events.addListener(geochart, 'regionClick', function(eventData) {
             currentRegion = eventData.region;

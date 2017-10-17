@@ -31,60 +31,55 @@
 		</nav>
 	</div>
 
-	<div id='map-content'>
-		<div id='map-display'> 
-			<div id="geochart" style="width: 400px;"></div>
-		</div>
-
-		<div class="container">
-		  <div class="modal fade" id="firstModal" role="dialog">
-		    <div class="modal-dialog"> 
-		      <!-- Modal content-->
-		      <div class="modal-content">
-		        <div class="modal-header">
-		          <button type="button" class="close" data-dismiss="modal">&times;</button>
-		          <h4 class="modal-title"></h4>
-		        </div>
-		        <div class="modal-body">
-		          <p>Use a two letter abbreviation.</p>
-		        </div>
-		        <div class="modal-footer">
-		          <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
-		        </div>
-		      </div>
-		    </div>
-		  </div>
-		</div>
+	<div id='map-display'> 
+		<div id="geochart" style="width: 600px;"></div>
 	</div>
 
-	<div>
-		<div class="container">
-		  <div class="modal fade" id="secondModal" role="dialog">
-		    <div class="modal-dialog"> 
-		      <!-- Modal content-->
-		      <div class="modal-content">
-		        <div class="modal-header">
-		          <button type="button" class="close" data-dismiss="modal">&times;</button>
-		          <h4 class="modal-title"></h4>
-		        </div>
-		        <div class="modal-body">
-		          <p>You have already added this state.</p>
-		        </div>
-		        <div class="modal-footer">
-		          <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
-		        </div>
-		      </div>
-		    </div>
-		  </div>
-		</div>
+	<div class="container">
+	  <div class="modal fade" id="firstModal" role="dialog">
+	    <div class="modal-dialog"> 
+	      <!-- Modal content-->
+	      <div class="modal-content">
+	        <div class="modal-header">
+	          <button type="button" class="close" data-dismiss="modal">&times;</button>
+	          <h4 class="modal-title"></h4>
+	        </div>
+	        <div class="modal-body">
+	          <p>Use a two letter abbreviation.</p>
+	        </div>
+	        <div class="modal-footer">
+	          <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+	        </div>
+	      </div>
+	    </div>
+	  </div>
 	</div>
-		<!-- isotope -->
+
+	<div class="container">
+	  <div class="modal fade" id="secondModal" role="dialog">
+	    <div class="modal-dialog"> 
+	      <!-- Modal content-->
+	      <div class="modal-content">
+	        <div class="modal-header">
+	          <button type="button" class="close" data-dismiss="modal">&times;</button>
+	          <h4 class="modal-title"></h4>
+	        </div>
+	        <div class="modal-body">
+	          <p>You have already added this state.</p>
+	        </div>
+	        <div class="modal-footer">
+	          <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+	        </div>
+	      </div>
+	    </div>
+	  </div>
+	</div>
+
+	<!-- isotope -->
 	<div id='crimeTable'>
 		<div>
 			<h3>Input or click on a state to add crime data to the table.</h3>
-
 			<h1>Sortable Crime Table</h1>
-
 			<div id="sorts" class="button-group">
 				<button class="button is-checked" data-sort-value="original-order">Original Order</button>
 				<button class="button" data-sort-value="name">State</button>
@@ -95,7 +90,6 @@
 				<button class="button" data-sort-value="number5">Robbery</button>
 				<button class="button" data-sort-value="number6">Assault</button>
 			</div>
-
 			<ul id='table-header'>
 				<li class='table-like__item'>
 					<div class='name'>Name</div>
@@ -107,8 +101,7 @@
 					<div class='number6 removeGutter'>Assault</div>
 				</li>
 			</ul>
-			<ul class="table-like">
-			</ul>
+			<ul class="table-like"></ul>
 		</div>
 	</div>
 
