@@ -137,7 +137,7 @@ $(document).ready(function() {
         var options = {
             // region: '002', // North America
             colorAxis: { colors: ['#ffffff', '#e6f0ff', '#cce0ff', '#b3d1ff', '#99c2ff', '#80b3ff', '#66a3ff', '#4d94ff', '#3385ff', '#1a75ff'] },
-            backgroundColor: 'white',
+            backgroundColor: 'transparent',
             datalessRegionColor: '#f8bbd0',
             defaultColor: '#f5f5f5',
             // width: 1300, 

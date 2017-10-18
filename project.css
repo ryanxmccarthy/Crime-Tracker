@@ -2,7 +2,15 @@
 
 * { box-sizing: border-box; }
 
-body { font-family: sans-serif; }
+body { 
+  font-family: sans-serif; 
+  background-color: grey;
+  font-family: avenir;
+}
+
+h1, h3 {
+  text-shadow: .5px .5px black;
+}
 
 /* ---- button ---- */
 
@@ -92,6 +100,10 @@ body { font-family: sans-serif; }
 .table-like__item .number5 { width: 14%; }
 .table-like__item .number6 { width: 14%; }
 
+.horizontal-gradient {
+  background: linear-gradient(to bottom, #D3D3D3, grey);
+}
+
 .navbar-brand {
 	font-size: 27px;
 	font-weight: bold;
@@ -125,4 +137,9 @@ body { font-family: sans-serif; }
   margin-bottom: 2px;
   padding: 0;
   border: 1px solid black;
+}
+
+@font-face {
+    font-family: avenir;
+    src: url(../fonts/avenir.ttf);
 }
