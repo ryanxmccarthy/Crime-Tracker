@@ -100,6 +100,10 @@ h1, h3 {
 .table-like__item .number5 { width: 14%; }
 .table-like__item .number6 { width: 14%; }
 
+.button {
+  outline: none;
+}
+
 .horizontal-gradient {
   background: linear-gradient(to bottom, #D3D3D3, grey);
 }
