@@ -214,22 +214,24 @@ $(document).ready(function() {
 
     // bind sort button click
     $('#sorts').on( 'click', 'button', function() {
-      var sortValue = $(this).attr('data-sort-value');
-      $table.isotope({ sortBy: sortValue });
+        var sortValue = $(this).attr('data-sort-value');
+        $table.isotope({ sortBy: sortValue });
     });
 
     // change is-checked class on buttons
     $('.button-group').each( function( i, buttonGroup ) {
-      var $buttonGroup = $( buttonGroup );
-      $buttonGroup.on( 'click', 'button', function() {
-        $buttonGroup.find('.is-checked').removeClass('is-checked');
-        $( this ).addClass('is-checked');
-      });
+        var $buttonGroup = $( buttonGroup );
+        $buttonGroup.on( 'click', 'button', function() {
+            $buttonGroup.find('.is-checked').removeClass('is-checked');
+            $( this ).addClass('is-checked');
+        });
+
+        $('#clear').on('click', function() {
+            $('.table-like').html('');
+            $('#default').addClass('is-checked');
+            userStates = [];
+        })
     });
 
-    $('#clear').on('click', function() {
-        $('.table-like').html('');
-        // $('.table-like').css('height', '0px');
-        userStates = [];
-    })
+    
 })
