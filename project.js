@@ -150,10 +150,34 @@ $(document).ready(function() {
             document.getElementById('geochart'));
         geochart.draw(data, options);
 
+       $('.reset').on('click', function(){
+          drawRegionsMap();
+        })
+        
         google.visualization.events.addListener(geochart, 'regionClick', function(eventData) {
             currentRegion = eventData.region;
             options['region'] = eventData.region;
-            options['resolution'] = 'provinces';
+            options['resolution'] = 'provinces'; 
+            if (currentRegion.substring(0, 5) === "US-NC") {
+                // If it is a US city
+                options['displayMode'] = 'markers';
+
+                var data = google.visualization.arrayToDataTable([
+                    ['City', 'Crime Rate (per 1,000 Residents)', 'Population'],
+                    ['Charlotte, NC', 6.93, 731424],
+                    ['Raleigh, NC', 4.20, 403892],
+                    ['Chapel Hill, NC', 2.13, 57233],
+                    ['Durham, NC', 8.69, 228330],
+                    ['Hillsborough, NC', 2.18, 6087],
+                    ['Wilmington, NC', 7.88, 106476],
+                    ['Greensboro, NC', 6.14, 269666],
+                    ['Asheville, NC', 5.25, 83393],
+                    ['Boone, NC', 2.20, 17122],
+                    ['Winston-Salem, NC', 7.98, 229617],
+                ]);  
+            geochart.draw(data, options);
+            } 
+
             var state = currentRegion;
             // console.log(state);
             var x = state.split('');
